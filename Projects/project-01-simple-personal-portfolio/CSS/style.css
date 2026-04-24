@@ -1,0 +1,403 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color: #ff305b;
+}
+
+.clr{
+  clear: both;
+}
+
+
+.container{
+  width: 90%;
+  margin: 60px auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  overflow: hidden;
+}
+
+header nav{
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  padding: 10px 30px;
+  z-index: 100;
+}
+
+header nav div{
+  float: left;
+  font-size: 36px;
+  width: 20%;
+  color: var(--main-color);
+}
+
+header nav ul li{
+  float: right;
+  list-style: none;
+  padding: 10px;
+  margin-left:20px;
+  width: calc((60% - 140px) / 6);
+  text-align: center;
+}
+
+header nav ul li a{
+  color: white;
+  transition: all .5s;
+}
+
+header nav ul li a:hover{
+  color: var(--main-color);
+}
+
+#Home {
+  background-image: url(../Images/Hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header #Home .container{
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+header #Home .container p{
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 2px;
+}
+
+header #Home .container p:first-child{
+  font-weight: bold;
+}
+
+header #Home .container h1{
+  font-size: 60px;
+  color: var(--main-color);
+  margin: 10px 0px;
+  font-weight: 900;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
+}
+
+main #About .container{
+  padding: 10px;
+}
+
+
+main #About .container .about-img{
+  width: 30%;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+main #About .container .about-img img{
+  width: 100%;
+}
+
+main #About .container .img-cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+main #About .container .about-img:hover .img-cover{
+  top: 0%;
+}
+
+main #About .container .about-text{
+  width: calc(70% - 50px);
+  float: left;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+main #About .container .about-text h2{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+main #About .container .about-text h2::first-letter{
+  color: var(--main-color);
+}
+
+main #About .container .about-text .nabza{
+  color: rgb(59, 59, 59);
+  margin: 15px 0px;
+  line-height: 1.6;
+}
+
+main #About .container .about-text ul li{
+  float: left;
+  list-style-type: none;
+  width: calc(40% - 20px);
+  margin: 10px;
+}
+
+main #About .container .about-text button{
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.5s;
+  margin: 10px;
+}
+
+main #About .container .about-text button:hover{
+  background-color: rgb(226, 0, 45);
+  transform: scale(1.0555);
+}
+
+main #About .container .about-text button i{
+  color: white;
+}
+
+main #Services{
+  background-color: #EEE;
+  padding: 10px;
+  text-align: center;
+}
+
+main #Services{
+  background-color: #EEE;
+}
+
+main #Services h2{
+  font-size: 40px;
+  color: rgb(70, 70, 70);
+}
+
+.sep{
+  margin: 30px auto;
+  width: 160px;
+  height: 1px;
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.sep::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 30%;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color);
+}
+
+.sep::after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 30%;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color);
+}
+
+main #Services .our-services{
+  margin: 40px 0px;
+  background-color: red;
+}
+
+main #Services .our-services div{
+  float: left;
+  width: 25%;
+  padding: 30px;
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+main #Services .our-services div i{
+  color: var(--main-color);
+  font-size: 28px;
+  transition: all 0.2s;
+}
+
+main #Services .our-services div:hover{
+  background-color: white;
+}
+
+main #Services .our-services div:hover i{
+  transform: scale(1.2);
+}
+
+main #Services .our-services div h3{
+  margin: 10px 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(70, 70, 70);
+}
+
+main #Services .our-services div p{
+  color: rgb(133, 133, 133);
+  
+}
+
+main #Portfolio{
+  padding: 10px;
+}
+
+main #Portfolio .container h2{
+  font-size: 40px;
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+
+main #Portfolio .container ul{
+  width: 50%;
+  margin: 50px auto;
+}
+
+main #Portfolio .container ul li{
+  text-align: center;
+  float: left;
+  list-style: none;
+  width: calc(100% / 4);
+}
+
+main #Portfolio .container ul li:first-child{
+  color: var(--main-color);
+}
+
+main #Portfolio .container .our-portfolio .item{
+  float: left;
+  width: calc((100% - 80px) / 3);
+  aspect-ratio: 1;
+  margin: 10px;
+  position: relative;
+}
+
+main #Portfolio .our-portfolio .item img{
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+main #Portfolio .container .our-portfolio .item::before{
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+main #Portfolio .container .our-portfolio .item:hover::before{
+  opacity: 1;
+}
+
+main .numbers{
+  padding: 40px;
+  background-color: #EEE;
+}
+
+main .numbers .container div{
+  float: left;
+  width: calc(100% / 4);
+  padding: 10px;
+  text-align: center;
+}
+
+main .numbers .container div i{
+  color: var(--main-color);
+  font-size: 28px;
+}
+
+main .numbers .container p:first-of-type{
+  margin: 10px;
+  font-weight: 500;
+  font-size: 28px;
+  color: rgb(71, 71, 71);
+}
+
+
+main #Contact{
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+main #Contact .container h2{
+  font-size: 40px;
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+
+main #Contact .container form .first input{
+  padding: 15px;
+  width: calc((100% - 40px) / 2);
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+main #Contact .container form .first input:first-child{
+  margin-right: 20px;
+}
+
+main #Contact .container form .second input{
+  padding: 15px;
+  margin: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+}
+textarea{
+  width: 80% !important;
+  height: 150px;
+  padding: 10px;
+}
+
+main #Contact .container form button{
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: 900;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  margin:10px;
+}
+main #Contact .container form input:focus{
+  border-color: var(--main-color) !important;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
